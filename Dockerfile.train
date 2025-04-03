@@ -1,0 +1,12 @@
+FROM <base imagae>
+
+# TODO: Set a working directory
+
+# TODO: Copy the requirements.txt file to the working directory
+
+# TODO: Install the Python dependencies
+
+# TODO: Copy the training script (train.py) to the working directory
+
+# TODO: Run the training script that generates the model
+CMD [...]
