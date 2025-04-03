@@ -1,21 +1,25 @@
 # Project Docker Microcredential
 micro-credential VIB/UGent - Reproducible data analysis
 
-In this project, you will train and run a machine learning model using Docker. Furthermore, you will store the Docker image on your own account on Docker hub. Using this image, you will build an Apptainer image on the HPC of UGent.
+In this project, you will train, run and serve a machine learning model using Docker. Furthermore, you will store the Docker images on your own account on Docker hub. Using the image of the training step, you will build an Apptainer image on the HPC of UGent.
 
 ## Deliverables
 
 - [ ] Clone this repository to your personal github account
 - [ ] Containerize training the machine learning model
+- [ ] Containerize serving of the machine learning model
 - [ ] Train and run the machine learning model using Docker
-- [ ] Store the image on your personal account on Docker Hub
-- [ ] Build an Apptainer image on the HPC UGent
-- [ ] Document the steps in a text document 
+- [ ] Run the Docker container serving the machine learning model
+- [ ] Store the Docker images on your personal account on Docker Hub
+- [ ] Provide the resulting Dockerfiles in GitHub
+- [ ] Build an Apptainer image on a HPC of your choice
+- [ ] Provide the logs of the slurm job in GitHub
+- [ ] Document the steps in a text document in GitHub
 
 ## Proposed steps - containerize and run training the machine learning model
 
 Complete file named `Dockerfile.train`
-Fill in the TODO sections.
+
 - Copy requirements.txt and install dependencies
 - Copy train.py to the working directory
 - Set the command to run train.py
@@ -23,12 +27,18 @@ Fill in the TODO sections.
 - Document the command as comment in the Dockerfile
 - Store the created Dockerfile in your cloned github repository
 
-## Proposed steps - store image on Dockerhub and build an Apptainer image on the HPC
+## Proposed steps - containerize and serve the machine learning model
+
+- Correct the order of the instructions in the Dockerfile.infer
+- Document the steps in the Dockerfile.infer as comments
+- Document the succesful `docker run` command in the Dockerfile.infer as a comment
+
+## Proposed steps - store images on Dockerhub and build an Apptainer image on the HPC
 
 - Create an account on Dockerhub
-- Store the built image on your account
-- Create a shell script on the HPC (Tier-2 cluster: donphan)
-- Store the validated shell script in your cloned github repository
+- Store the built images on your account
+- Create a shell script on the HPC of your preference
+- Store the shell script in your cloned github repository
 
 
 
