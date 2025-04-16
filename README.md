@@ -5,10 +5,10 @@ In this project, you will train, run and serve a machine learning model using Do
 
 ## Deliverables
 
-- [ ] Clone this repository to your personal github account
-- [ ] Containerize training the machine learning model
+- [X] Clone this repository to your personal github account
+- [X] Containerize training the machine learning model
 - [ ] Containerize serving of the machine learning model
-- [ ] Train and run the machine learning model using Docker
+- [X] Train and run the machine learning model using Docker
 - [ ] Run the Docker container serving the machine learning model
 - [ ] Store the Docker images on your personal account on Docker Hub
 - [ ] Provide the resulting Dockerfiles in GitHub
@@ -20,12 +20,12 @@ In this project, you will train, run and serve a machine learning model using Do
 
 Complete file named `Dockerfile.train`
 
-- Copy requirements.txt and install dependencies
-- Copy train.py to the working directory
-- Set the command to run train.py
-- Run the training of the model on your computer
-- Document the command as comment in the Dockerfile
-- Store the created Dockerfile in your cloned github repository
+[X] Copy requirements.txt and install dependencies
+[X] Copy train.py to the working directory
+[X] Set the command to run train.py
+[X] Run the training of the model on your computer
+[X] Document the command as comment in the Dockerfile
+[X] Store the created Dockerfile in your cloned github repository
 
 ## Proposed steps - containerize and serve the machine learning model
 

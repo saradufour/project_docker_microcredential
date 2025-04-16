@@ -1,12 +1,25 @@
-FROM <base imagae>
+FROM python:3.9-slim
 
 # TODO: Set a working directory
+WORKDIR /my-workdir
 
 # TODO: Copy the requirements.txt file to the working directory
+COPY requirements.txt /my-workdir/
+
 
 # TODO: Install the Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
 # TODO: Copy the training script (train.py) to the working directory
+COPY train.py /my-workdir/
 
 # TODO: Run the training script that generates the model
-CMD [...]
+CMD ["python", "train.py"]
+
+
+# command for image build
+# docker build . --tag python-train-sd:v1.0.0 -f Dockerfile.train
+
+# command to run the docker image
+# docker run -v .:/my-workdir python-train-sd:v1.0.0
+# output ot the docker run: Model training complete and saved as iris_model.pkl
