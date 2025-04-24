@@ -37,8 +37,8 @@ Complete file named `Dockerfile.train`
 
 - [X] Create an account on Dockerhub
 - [X] Store the built images on your account
-- [X]Create a shell script on the HPC of your preference
-- [X]Store the shell script in your cloned github repository
+- [X] Create a shell script on the HPC of your preference
+- [X] Store the shell script in your cloned github repository
 
 
 
