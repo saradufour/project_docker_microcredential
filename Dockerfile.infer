@@ -1,7 +1,38 @@
-WORKDIR /app
-COPY requirements.txt .
-COPY server.py .
+#WORKDIR /app
+#COPY requirements.txt .
+#COPY server.py .
+#FROM python:3.9-slim
+#CMD ["python", "server.py"]
+#RUN pip install --no-cache-dir -r requirements.txt
+#EXPOSE 8080
+
+
 FROM python:3.9-slim
-CMD ["python", "server.py"]
+
+# TODO: Set a working directory
+WORKDIR /my-workdir
+
+# TODO: Copy the requirements.txt file to the working directory
+COPY requirements.txt /my-workdir/
+
+# TODO: Install the Python dependencies
 RUN pip install --no-cache-dir -r requirements.txt
+
+# TODO: Copy the server script (server.py.py) to the working directory
+COPY server.py /my-workdir/
+
+#TODO: document which port(s) the container is intended to listen on at runtime
 EXPOSE 8080
+
+# TODO: Run the server script that generates the model
+CMD ["python", "server.py"]
+
+
+# command for image build
+#docker build . --tag python-server-sd:v1.0.0 -f Dockerfile.infer
+
+# command to run the docker image
+#docker run --detach --name python_server_docker -p 4441:8080 -v .:/my-workdir python-server-sd:v1.0.0
+
+#access the running docker locally via: http://127.0.0.1:4441/
+
